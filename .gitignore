@@ -49,6 +49,10 @@ config_local.php
 .env
 .env.local
 
+# Arquivos grandes (instaladores)
+INSTALADORES/XAMPP.exe
+*.exe
+
 # Arquivos de banco de dados locais
 *.sqlite
 *.db
