@@ -20,6 +20,7 @@
 
     { "src": "/pages/user/user_login.php", "dest": "/api/pages/user/user_login.php" },
     { "src": "/pages/user/user_dashboard.php", "dest": "/api/pages/user/user_dashboard.php" },
-    { "src": "/pages/user/user_logout.php", "dest": "/api/pages/user/user_logout.php" }
+    { "src": "/pages/user/user_logout.php", "dest": "/api/pages/user/user_logout.php" },
+    { "src": "/test/db", "dest": "/api/test/db.php" }
   ]
 }

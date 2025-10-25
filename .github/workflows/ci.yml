@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: pdo_mysql, mysqli
+          coverage: none
+
+      - name: Install Composer dependencies
+        run: |
+          php -v
+          composer --version
+          composer install --no-interaction --prefer-dist --no-progress
+
+      - name: Lint PHP files
+        run: |
+          find . -type f -name "*.php" ! -path "./vendor/*" -print0 | xargs -0 -n 1 -P 4 php -l
+
+      - name: Validate vercel.json
+        run: |
+          php -r "if (json_decode(file_get_contents('vercel.json'))===null) { fwrite(STDERR, 'vercel.json inválido'); exit(1);} else { echo 'vercel.json ok'; }"
