@@ -3,6 +3,7 @@
     "api/**/*.php": {
       "runtime": "vercel-php@0.7.4",
       "maxDuration": 10,
+      "includeFiles": ["includes/**", "pages/**", "public/**"],
       "excludeFiles": "{INSTALADORES/**,uploads/**,pages/uploads/**,sesap_curriculo/**,.github/**}"
     }
   },
