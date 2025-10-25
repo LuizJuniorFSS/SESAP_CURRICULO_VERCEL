@@ -3,13 +3,7 @@
     "api/**/*.php": {
       "runtime": "vercel-php@0.7.4",
       "maxDuration": 10,
-      "excludeFiles": [
-        "INSTALADORES/**",
-        "uploads/**",
-        "pages/uploads/**",
-        "sesap_curriculo/**",
-        ".github/**"
-      ]
+      "excludeFiles": "{INSTALADORES/**,uploads/**,pages/uploads/**,sesap_curriculo/**,.github/**}"
     }
   },
   "installCommand": "composer install --no-dev --prefer-dist --no-progress --no-interaction",
