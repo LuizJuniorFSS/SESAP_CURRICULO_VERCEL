@@ -1,0 +1,25 @@
+{
+  "functions": {
+    "api/**/*.php": {
+      "runtime": "vercel-php@0.7.4",
+      "memory": 256,
+      "maxDuration": 10
+    }
+  },
+  "installCommand": "composer install --no-dev --prefer-dist --no-progress --no-interaction",
+  "routes": [
+    { "src": "^/$", "dest": "/public/index.html" },
+
+    { "src": "/pages/processar.php", "dest": "/api/pages/processar.php" },
+    { "src": "/pages/download.php", "dest": "/api/pages/download.php" },
+    { "src": "/pages/visualizar.php", "dest": "/api/pages/visualizar.php" },
+
+    { "src": "/pages/admin/login.php", "dest": "/api/pages/admin/login.php" },
+    { "src": "/pages/admin/admin.php", "dest": "/api/pages/admin/admin.php" },
+    { "src": "/pages/admin/logout.php", "dest": "/api/pages/admin/logout.php" },
+
+    { "src": "/pages/user/user_login.php", "dest": "/api/pages/user/user_login.php" },
+    { "src": "/pages/user/user_dashboard.php", "dest": "/api/pages/user/user_dashboard.php" },
+    { "src": "/pages/user/user_logout.php", "dest": "/api/pages/user/user_logout.php" }
+  ]
+}

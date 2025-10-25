@@ -50,6 +50,7 @@ config_local.php
 .env.local
 
 # Arquivos grandes (instaladores)
+INSTALADORES/
 INSTALADORES/XAMPP.exe
 *.exe
 

@@ -1,0 +1,23 @@
+# Ignore local-only files and directories
+# Uploads and temp files
+uploads/
+storage/uploads/
+public/uploads/
+tmp/
+*.log
+*.sql
+
+# Environment files
+.env
+.env.*
+
+# Editor and OS noise
+.DS_Store
+.vscode/
+.idea/
+
+# Dependencies (installed in build via Composer)
+vendor/
+
+# Node (not used, but ignore if present)
+node_modules/
