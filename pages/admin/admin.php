@@ -7,8 +7,8 @@ if (!isset($_SESSION['admin_logado']) || $_SESSION['admin_logado'] !== true) {
     exit;
 }
 
-require_once '../../includes/config.php';
-require_once '../../includes/email.php';
+require_once __DIR__ . '/../../includes/config.php';
+require_once __DIR__ . '/../../includes/email.php';
 
 // Verificar se a conexão com o banco existe
 if (!isset($conn)) {
