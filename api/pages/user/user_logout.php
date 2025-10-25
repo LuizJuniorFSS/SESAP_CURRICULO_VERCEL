@@ -1,3 +1,3 @@
 <?php
-chdir(dirname(__DIR__, 4));
+chdir(dirname(__DIR__, 3));
 require 'pages/user/user_logout.php';
